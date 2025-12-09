@@ -1,0 +1,98 @@
+import Link from "next/link";
+const links = [
+  { title: "Home", url: "/", id: 1 },
+  { title: "About", url: "/", id: 2 },
+  { title: "Work", url: "/", id: 3 },
+  { title: "Faq", url: "/", id: 4 },
+];
+
+const socialLinks = [
+  { title: "Instagram", url: "www.instagram.com", id: 1 },
+  { title: "LinkedIn", url: "https://www.linkedin.com", id: 2 }
+];
+
+const Footer = () => {
+  return (
+    <section className="w-full h-120 bg-primary p-5">
+      <div className="bg-orange w-full h-full p-10 flex items-center justify-center rounded-xl ">
+        <div className="mx-auto max-w-[1500px] w-full h-full flex flex-col justify-between">
+          <div className="w-full h-10 flex items-center justify-between">
+            {/* Footer Menu Links */}
+            <div className="footer-top-bar">
+              <div className="flex gap-6 ">
+                {links.map((item) => {
+                  return (
+                    <div
+                      key={item.id}
+                      className="group overflow-hidden relative"
+                    >
+                      <Link
+                        className="font-[inter] font-medium uppercase text-sm block transition-transform duration-300 group-hover:-translate-y-4"
+                        href={item.url}
+                      >
+                        {item.title}
+                      </Link>
+
+                      <Link
+                        className="absolute left-0 top-16 block transition-transform duration-300 group-hover:-translate-y-16 font-[inter] font-medium uppercase text-sm "
+                        href={item.url}
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            {/* Social Links */}
+            <div className="flex items-center justify-between">
+                <div className="footer-top-bar">
+              <div className="flex gap-6 ">
+                {socialLinks.map((item) => {
+                  return (
+                    <div
+                      key={item.id}
+                      className="group overflow-hidden relative"
+                    >
+                      <Link
+                        className="font-[inter] font-medium uppercase text-sm block transition-transform duration-300 group-hover:-translate-y-4"
+                        href={item.url}
+                      >
+                        {item.title}
+                      </Link>
+
+                      <Link
+                        className="absolute left-0 top-16 block transition-transform duration-300 group-hover:-translate-y-16 font-[inter] font-medium uppercase text-sm "
+                        href={item.url}
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            </div>
+            
+          </div>
+
+          <h1 className="text-6xl text-white text-center uppercase">
+            Your brand deserves better.<br></br> Let's build it right.
+          </h1>
+          <div className="w-full h-10">
+            <div className="">
+              <Link className="text-3xl italic" href="/">
+                Kinzo
+              </Link>
+              <p className="text-sm font-[inter]">
+                2025 © All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Footer;
