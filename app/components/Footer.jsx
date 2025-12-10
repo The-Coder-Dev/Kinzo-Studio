@@ -17,9 +17,10 @@ const Footer = () => {
       <div className="bg-orange w-full h-full p-10 flex items-center justify-center rounded-xl ">
         <div className="mx-auto max-w-[1500px] w-full h-full flex flex-col justify-between">
           {/* Footer Top  */}
-          <div className="w-full h-10 flex items-center justify-between">
+          <div className="w-full h-10 items-start md:items-center justify-between flex flex-col md:flex-row gal-9">
             <div className="footer-top-bar">
               <div className="flex gap-6 ">
+                
                 {links.map((item) => {
                   return (
                     <div
@@ -76,14 +77,14 @@ const Footer = () => {
             </div>
           </div>
 
-          <h1 className="text-6xl text-white text-center uppercase">
+          <h1 className="text-3xl md:text-6xl  text-primary text-center uppercase">
             Your brand deserves better.<br></br> Let's build it right.
           </h1>
 
           {/* Bottom Footer  */}
-          <div className="w-full h-10 flex items-center justify-between">
-            <div className="">
-              <Link className="text-3xl italic" href="/">
+          <div className="w-full h-fit flex flex-col md:flex-row items-center gap-6 justify-between">
+            <div className="flex flex-col items-center md:items-start justify-center">
+              <Link className="text-2xl italic" href="/">
                 Kinzo
               </Link>
               <p className="text-sm font-[inter]">
@@ -95,7 +96,7 @@ const Footer = () => {
                 {/* Email */}
               <div className="Email">
                 <h2>Email</h2>
-                <div className="group overflow-hidden relative text-3xl">
+                <div className="group overflow-hidden relative text-sm md:text-3xl">
                   <Link
                     className="font-[inter] font-medium   block transition-transform duration-300 group-hover:-translate-y-16"
                     href="/"
@@ -114,7 +115,7 @@ const Footer = () => {
                   {/* Phone No */}
                <div className="">
                 <h2>Phone</h2>
-                <div className="group overflow-hidden relative text-3xl">
+                <div className="group overflow-hidden relative text-sm md:text-3xl">
                   <Link
                     className="font-[inter] font-medium uppercase  block transition-transform duration-300 group-hover:-translate-y-16"
                     href="/"

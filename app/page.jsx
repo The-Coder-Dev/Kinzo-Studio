@@ -1,9 +1,11 @@
 import React from 'react'
+import Home from './components/Home'
 
 const page = () => {
   return (
-    <section className='h-screen w-full bg-primary'>
-    </section>
+    <main className='w-full h-screen bg-primary'>
+      <Home />
+    </main>
   )
 }
 
